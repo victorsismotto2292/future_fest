@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducTech - Home</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="imgs/Logo.png" alt="logo">
+        <div class="esquerda">
+            <a href="/guto/PaginaLogin/Login.html">LOGIN</a>
+            <a href="/guto/PaginaCadastro/Cadastro.html">CADASTRO</a>
+            <a href="/guto/PáginaAjuda/Ajuda.html">AJUDA</a>
+            <a href="/guto/PáginaContatos/Contato.html">CONTATOS</a>
+            <a href="/guto/PáginaF.A.Q/F.A.Q.html">F.A.Q</a>
+        </div>
+        <div class="direita">
+            <input class="Pesquisa" type="text" placeholder="Pesquise Aqui">
+            <ul class="ListaPesquisa">
+                <li id="IA">IA</li>
+                <li id="Tecnologia da Educação">Tecnologia da Educação</li>
+                <li id="Acesso à Informação">Acesso à Informação</li>
+                <li id="Aprendizagem Personalizada">Aprendizagem Personalizada</li>
+                <li id="Engajamento e Motivação">Engajamento e Motivação</li>
+                <li id="Desenvolvimento de Habilidades">Desenvolvimento de Habilidades</li>
+                <li id="Acessibilidade">Acessibilidade</li>
+                <li id="Desafios">Desafios</li>
+                <li id="vantagens">Vantagens</li>
+            </ul>
+        </div>
+        <script>
+            const inputPesquisa = document.querySelector('.Pesquisa');
+            const lista = document.querySelector('.ListaPesquisa');
+
+            inputPesquisa.addEventListener('click', () => {
+                if (lista.style.display === 'none' || lista.style.display === '') {
+                    lista.style.display = 'block';
+                } else {
+                    lista.style.display = 'none';
+                }
+            });
+        </script>
+    </header>
+    <main>
+        <div class="parte1">
+            <h1>Tecnologia da Educação - EducTech</h1>
+            <div class="parte1row">
+                <p>A Tecnologia da Educação refere-se ao uso de ferramentas e recursos tecnológicos com o objetivo de
+                    apoiar e
+                    aprimorar o processo de ensino e aprendizagem. Essa abordagem envolve uma ampla gama de recursos,
+                    como
+                    software educacional, plataformas de e-learning, aplicativos, dispositivos móveis, realidade
+                    aumentada,
+                    inteligência artificial e muito mais. Esses recursos têm o potencial de transformar a sala de aula
+                    tradicional, permitindo que educadores e alunos interajam de maneiras novas e inovadoras. Com a
+                    integração
+                    dessas tecnologias, é possível personalizar a experiência de aprendizagem, adequando o conteúdo às
+                    necessidades e estilos de cada aluno.</p>
+                <img src="imgs/main.png" alt="imagem main">
+            </div>
+        </div>
+        <section id="geracaoVideoIA">
+            <h1>DESCUBRA NOSSA IA!</h1>
+            <h2>Gere um vídeo a partir de textos:</h2>
+            <textarea type="text" id="search-input" rows="4" cols="50"
+                placeholder="Digite seu texto aqui... (ex: cachorro)"></textarea>
+            <div id="video-container"></div>
+            <br>
+            <div class="button">
+                <button onclick="buscarVideos()">Gerar Vídeo</button>
+            </div>
+        </section>
+        <div class="parte2">
+            <br><br><br>
+            <p>A <B>tecnologia na educação</B> é importante por criar oportunidades de aprendizagem inovadoras,<br>
+                acessíveis e personalizadas, transformando o processo educacional <br>para ser mais dinâmico e adaptado
+                às
+                necessidades dos alunos. <br>Além de facilitar o acesso a recursos educacionais, <br>a tecnologia
+                conecta
+                estudantes e professores,<br> promovendo colaboração e comunicação.</p>
+            <br><br><br>
+            <h2>Acesso à Informação</h2>
+            <p>A tecnologia facilita o acesso rápido e fácil a uma vasta quantidade de informações, <br>complementando o
+                conteúdo de aulas e possibilitando a exploração <br> além dos livros didáticos, tanto para professores
+                quanto
+                para alunos.</p>
+            <br><br><br>
+            <h2>Aprendizagem Personalizada</h2>
+            <p>Plataformas educacionais adaptativas ajustam o conteúdo <br> de acordo com o nível de habilidade de cada
+                estudante, permitindo que eles aprendam no seu próprio ritmo.</p>
+        </div>
+        <div class="parte3">
+            <br><br>
+            <h2>Engajamento e Motivação</h2>
+            <p>A tecnologia torna as aulas mais interativas, com o uso de jogos educativos, vídeos e simulações,
+                <br>aumentando o interesse dos alunos pelo conteúdo.
+            </p>
+            <br><br><br>
+            <h2>Desenvolvimento de Habilidades</h2>
+            <p>Ferramentas digitais auxiliam os alunos a desenvolver habilidades essenciais como pensamento crítico,
+                <br>resolução de problemas e colaboração, <br> características necessárias no século XXI.
+            </p>
+            <br><br><br>
+            <h2>Acessibilidade</h2>
+            <p>A tecnologia remove barreiras geográficas e temporais, <br>facilitando o acesso à <br>educação através de
+                plataformas online, <br>materiais digitais e soluções adaptadas <br>para pessoas com deficiências.
+                <br>Além
+                disso, o
+                ensino digital pode ser financeiramente mais acessível.
+            </p>
+            <br><br><br>
+        </div>
+        <div class="parte4">
+            <br><br>
+            <h2>Desafios</h2>
+            <p>Apesar das vantagens, a tecnologia apresenta desafios como a adaptação de <br>professores e a
+                <br>integração
+                com as metodologias de ensino. <br>Treinamento contínuo e suporte são fundamentais <br>para lidar com a
+                constante
+                evolução das ferramentas digitais.
+                Além disso, a resistência à mudança por parte de alguns educadores pode dificultar a implementação
+                eficaz
+                das novas tecnologias.
+            </p>
+            <br><br>
+            <img src="imgs/imgp4.png" alt="">
+            <br><br>
+        </div>
+        <div class="parte5">
+            <br><br><br><br><br><br>
+            <h2>Vantagens</h2><br>
+            <p>A tecnologia permite automatizar tarefas, otimizar a gestão escolar e <br> facilitar o acompanhamento do
+                desempenho de alunos e professores. <br>Isso melhora a comunicação entre a escola e a comunidade, <br>
+                além de
+                preparar os alunos para o mundo digital.</p>
+            <p>Por fim, a tecnologia educacional é um caminho inevitável para melhorar o <br>processo de ensino e
+                aprendizagem, proporcionando benefícios tanto pedagógicos quanto administrativos.</p>
+            <img src="imgs/pexels-capondesign-1261820.jpg" alt="">
+        </div>
+        <button id="scrollToTopBtn" onclick="scrollToTop()">Voltar ao Topo</button>
+        </div>
+        <script>
+            window.embeddedChatbotConfig = {
+            chatbotId: "imbnPh7smPYlMeiGNPERF",
+            domain: "www.chatbase.co"
+            }
+            </script>
+            <script
+            src="https://www.chatbase.co/embed.min.js"
+            chatbotId="imbnPh7smPYlMeiGNPERF"
+            domain="www.chatbase.co"
+            defer>
+            </script>
+    </main>
+
+    <script src="Home.js"></script>
+</body>
+
+</html>

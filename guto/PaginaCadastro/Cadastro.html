@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducTech - Cadastro</title>
+    <link rel="stylesheet" href="Cadastro.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <a href="/guto/Páginahome/index.html" class="back-button">
+                <span class="arrow">←</span> Voltar
+            </a>
+        </nav>
+        <h1>Cadastro</h1>
+    </header>
+    
+    <main>
+        <div class="container">
+            <form class="auth-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Nome completo</label>
+                    <input type="text" id="name" name="name" required 
+                           placeholder="Seu nome completo">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required 
+                           placeholder="Seu melhor email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" 
+                               required placeholder="Crie uma senha forte">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirme a senha</label>
+                    <div class="password-input">
+                        <input type="password" id="confirm-password" 
+                               name="confirm-password" required 
+                               placeholder="Digite a senha novamente">
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Criar conta
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Já tem uma conta?</p>
+                <a href="/guto/PaginaLogin/Login.html" class="login-link">
+                    Fazer login
+                </a>
+            </div>
+        </div>
+    </main>
+    <script src="Cadastro.js"></script>
+    <script src="Login.js"></script>
+</body>
+</html>

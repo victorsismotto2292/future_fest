@@ -1,0 +1,411 @@
+*{
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #520078;
+    background-size: cover;
+    text-align: center;
+    margin-top: -20px;
+}
+
+header a{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    background-color: #00000092;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 50px;
+    margin: 20px;
+    margin-left: 150vh;
+    margin-top: 9vh;
+    border: 3px solid rgb(78, 30, 190);
+}
+header a:hover {
+    background-color: #000000cc;
+    transform: scale(1.05);
+}
+
+header h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #473154;
+    font-size: 5em;
+    margin-top: -20px;
+    text-transform: uppercase;
+}
+
+header p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#ffffff;
+    text-shadow: 2px 2px 2px #473154;
+    text-transform: uppercase;
+    margin-top: 60px;
+    font-size: 2em;
+}
+
+header img{
+    margin-top: 60px;
+    margin-bottom: 50px;
+    max-width: 1254px;
+    max-height: 500px;
+    align-self: center;
+}
+
+main{
+    margin-top: -17px;
+    width: 100%;
+    height: 1000px;
+    background-color: #520078;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+}
+
+#ContainerContatos{
+    flex-direction: column;
+}
+
+.Baraldi{
+    display: flex;
+    text-align: center;
+    border-radius: 30px;
+    border: 2px solid black;
+    text-align: center;
+    width: 1245px;
+    height: 254px;
+    background-color: #473154;
+    align-self: flex-start;
+    margin-top: 50px;
+}
+
+.Baraldi .textos{
+    margin-top: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    gap: 35px;
+    flex-direction: column;
+}
+
+.Baraldi .textos h2{
+    text-align: center;
+    color:#C286E4;
+    text-shadow: 1px 1px 1px black;
+    align-self: center;
+    font-size: 3.5em;
+    margin-left: 200px;
+}
+
+.Baraldi .textos p{
+    text-align: center;
+    align-self: center;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    margin-left: 200px;
+    font-size: 1.5em;
+}
+
+.Baraldi .textos .contatosB h3{
+    color: white;
+    margin-top: 15px;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: underline;
+}
+
+.Baraldi .textos .contatosB{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.Baraldi .textos .contatosB a:hover{
+    transform: scale(1.25);
+}
+
+.Victor{
+    display: flex;
+    text-align: center;
+    border-radius: 30px;
+    border: 2px solid black;
+    text-align: center;
+    width: 1245px;
+    height: 254px;
+    background-color: #473154;
+    align-self: flex-start;
+    margin-top: 50px;
+}
+
+.Victor .textos{
+    margin-top: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    gap: 35px;
+    flex-direction: column;    
+}
+
+.Victor .textos h2{
+    text-align: center;
+    color:#C286E4;
+    text-shadow: 1px 1px 1px black;
+    align-self: center;
+    font-size: 3.5em;
+    margin-left: 130px;    
+}
+
+.Victor .textos p{
+    text-align: center;
+    align-self: center;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    margin-left: 130px;
+    font-size: 1.5em;    
+}
+
+.Victor .textos .contatosV h3{
+    color: white;
+    margin-top: 15px;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: underline;
+}
+
+.Victor .textos .contatosV{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: row;    
+}
+
+.Victor .textos .contatosV a:hover{
+    transform: scale(1.25);
+}
+
+.Raquel{
+    display: flex;
+    text-align: center;
+    border-radius: 30px;
+    border: 2px solid black;
+    text-align: center;
+    width: 1245px;
+    height: 254px;
+    background-color: #473154;
+    align-self: flex-start;
+    margin-top: 50px;    
+}
+
+.Raquel .textos{
+    margin-top: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    gap: 35px;
+    flex-direction: column;    
+}
+
+.Raquel .textos h2{
+    text-align: center;
+    color:#C286E4;
+    text-shadow: 1px 1px 1px black;
+    align-self: center;
+    font-size: 3.5em;
+    margin-left: 190px;
+}
+
+.Raquel .textos p{
+    text-align: center;
+    align-self: center;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    margin-left: 190px;
+    font-size: 1.5em;    
+}
+
+.Raquel .textos .contatosR h3{
+    color: white;
+    margin-top: 15px;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: underline;
+}
+
+.Raquel .textos .contatosR{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.Raquel .textos .contatosR a:hover{
+    transform: scale(1.25);
+}
+
+/* Media Queries para dispositivos menores */
+
+/* Dispositivos entre 1200px e 1024px */
+@media screen and (max-width: 1200px) {
+    header h1 {
+        font-size: 3.5em;
+    }
+    header a {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    header p {
+        font-size: 1.5em;
+        margin-top: 20px;
+    }
+    .Baraldi, .Victor, .Raquel {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+}
+
+/* Dispositivos entre 1024px e 768px */
+@media screen and (max-width: 1024px) {
+    header h1 {
+        font-size: 3em;
+    }
+    header p {
+        font-size: 1.4em;
+        margin-top: 10px;
+    }
+    header img {
+        width: 100%;
+        height: auto;
+    }
+    .Baraldi, .Victor, .Raquel {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+    .textos h2 {
+        font-size: 2em;
+    }
+    .textos p {
+        font-size: 1.2em;
+    }
+}
+
+/* Dispositivos entre 768px e 600px */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+    header a {
+        padding: 8px 16px;
+        font-size: 0.8em;
+    }
+    header p {
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+    .Baraldi, .Victor, .Raquel {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+    .textos h2 {
+        font-size: 1.8em;
+    }
+    .textos p {
+        font-size: 1em;
+    }
+    .contatosB, .contatosV, .contatosR {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Dispositivos entre 600px e 480px */
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+    header a {
+        padding: 6px 12px;
+        font-size: 0.7em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .Baraldi, .Victor, .Raquel {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+        padding: 8px;
+    }
+    .textos h2 {
+        font-size: 1.5em;
+    }
+    .textos p {
+        font-size: 0.9em;
+    }
+}
+
+/* Dispositivos menores que 480px */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+    header h1 {
+        font-size: 1.8em;
+    }
+    header p {
+        font-size: 0.9em;
+        margin-top: 5px;
+    }
+    .Baraldi, .Victor, .Raquel {
+        width: 100%;
+        height: auto;
+        padding: 5px;
+    }
+    .textos h2 {
+        font-size: 1.4em;
+    }
+    .textos p {
+        font-size: 0.8em;
+    }
+    .contatosB h3, .contatosV h3, .contatosR h3 {
+        font-size: 1em;
+        margin-top: 10px;
+    }
+    .contatosB a, .contatosV a, .contatosR a {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Dispositivos menores que 360px */
+@media screen and (max-width: 360px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    header p {
+        font-size: 0.8em;
+    }
+    .textos h2 {
+        font-size: 1.2em;
+    }
+    .textos p {
+        font-size: 0.7em;
+    }
+    .contatosB h3, .contatosV h3, .contatosR h3 {
+        font-size: 0.9em;
+    }
+    .contatosB a img, .contatosV a img, .contatosR a img {
+        width: 25px;
+        height: 25px;
+    }
+}

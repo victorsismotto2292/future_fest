@@ -1,0 +1,595 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-color: #B978D7;
+}
+
+header {
+    background-color: #B978D7;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    color: white;
+    text-shadow: 2px 2px 4px #473154;
+    font-size: 3.5rem;
+    margin: 1rem 0;
+}
+
+.nav-bar {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border: 3px solid rgb(78, 30, 190);
+    border-radius: 2rem;
+    font-weight: 500;
+}
+
+.back-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+}
+
+.arrow {
+    font-size: 1.2rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 200px);
+    padding: 2rem 1rem;
+}
+
+.container {
+    background-color: #473154;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 480px;
+}
+
+/* Formulários - Comum a todas as páginas */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    padding: 0.75rem 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    text-decoration-color: black;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+
+.form-group input ::placeholder{
+    align-items: center;
+}
+
+.form-group input:focus {
+    color: white;
+    border-color: #B978D7;
+}
+
+/* Campos de senha */
+.password-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #473154;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+/* Opções do formulário de login */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    padding: 0 2rem;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    padding-right: 1rem;
+}
+
+.forgot-password {
+    color: #B978D7;
+    text-decoration: none;
+    padding-left: 1rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.form-group input{
+    background-color: #B978D7;
+    color: white;
+    text-align: center;
+}
+
+/* Botão de submit - Comum a todas as páginas */
+.submit-button {
+    background-color: #B978D7;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #a246cc;
+    transform: translateY(-2px);
+}
+
+/* Rodapé dos formulários */
+.auth-footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.auth-footer a {
+    color: #B978D7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Mensagem informativa - Usado principalmente na página de recuperação de senha */
+.form-message {
+    color: white;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+    line-height: 1.4;
+}
+
+/* Estilos específicos para a página de cadastro */
+.register-form .form-group {
+    margin-bottom: 0.5rem;
+}
+
+.register-form .password-requirements {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+/* Estilos específicos para a página de recuperação de senha */
+.recovery-form {
+    text-align: center;
+}
+
+.recovery-form .form-message {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Feedbacks visuais */
+.success-message {
+    color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.1);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    color: #f44336;
+    background-color: rgba(244, 67, 54, 0.1);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Senha.html Styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --background-color: #f8f9fa;
+    --text-color: #212529;
+    --animation-duration: 0.3s;
+  }
+  
+  @keyframes floatIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4);
+    }
+    70% {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 15px rgba(0, 123, 255, 0);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+  }
+  
+  @keyframes gradientBorder {
+    0% { border-color: var(--primary-color); }
+    50% { border-color: var(--success-color); }
+    100% { border-color: var(--primary-color); }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 3rem;
+      animation: floatIn 0.5s ease-out;
+    }
+    
+    .form-message {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      color: var(--secondary-color);
+      animation: floatIn 0.7s ease-out;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .container {
+      max-width: 720px;
+    }
+    
+    .form-group {
+      margin-bottom: 2rem;
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    
+    .form-group input:focus {
+      border-color: var(--primary-color);
+      animation: gradientBorder 2s infinite;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      max-width: 540px;
+      padding: 2rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      animation: floatIn 0.5s ease-out;
+    }
+    
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 12px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      background-color: transparent;
+    }
+    
+    .back-button:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+      transform: scale(1.1);
+    }
+    
+    .arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+    
+    .back-button:hover .arrow {
+      transform: translateX(-5px);
+    }
+    
+    button[type="submit"] {
+      width: 100%;
+      padding: 16px;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .container {
+      padding: 1.5rem;
+    }
+    
+    .form-message {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      padding: 0 1rem;
+    }
+    
+    .form-group label {
+      font-size: 14px;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    
+    .form-group input {
+      padding: 12px;
+      font-size: 14px;
+    }
+}
+
+/* Continuação do @media screen and (max-width: 576px) */
+button[type="submit"] {
+    margin-top: 2rem;
+    padding: 14px;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button[type="submit"]::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transform: rotate(45deg);
+    animation: shimmer 2s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%) rotate(45deg);
+    }
+    100% {
+      transform: translateX(100%) rotate(45deg);
+    }
+  }
+  
+  .form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .form-group:focus-within::after {
+    width: 100%;
+  }
+
+/* Tablet em modo paisagem */
+@media screen and (min-width: 768px) and (max-height: 768px) {
+  .container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .form-message {
+    margin-bottom: 1.5rem;
+  }
+  
+  button[type="submit"] {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Estilos para telas ultra-wide */
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1200px;
+    padding: 4rem;
+  }
+  
+  .form-message {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+  }
+  
+  .form-group input {
+    padding: 18px;
+    font-size: 18px;
+  }
+  
+  button[type="submit"] {
+    padding: 20px;
+    font-size: 18px;
+  }
+}
+
+/* Suporte para dispositivos com hover */
+@media (hover: hover) {
+  .back-button:hover {
+    background-color: rgba(var(--primary-color), 0.1);
+  }
+  
+  button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  }
+  
+  .form-group input:hover {
+    border-color: var(--primary-color);
+  }
+}
+
+/* Modo de Alto Contraste */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-color: #0056b3;
+    --text-color: #000000;
+    --background-color: #ffffff;
+  }
+  
+  .form-group input {
+    border-width: 2px;
+  }
+  
+  button[type="submit"] {
+    border: 2px solid #000000;
+  }
+  
+  .form-message {
+    color: #000000;
+  }
+}
+
+/* Preferência por movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  button[type="submit"] {
+    transform: none !important;
+  }
+  
+  .back-button:hover {
+    transform: none;
+  }
+}
+
+/* Suporte para modo escuro aprimorado */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+  }
+  
+  .form-message {
+    color: #e0e0e0;
+  }
+  
+  .form-group input {
+    background-color: #1e1e1e;
+    border-color: #333333;
+    color: #ffffff;
+  }
+  
+  .form-group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  }
+  
+  button[type="submit"] {
+    background-color: var(--primary-color);
+    border: none;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .back-button {
+    color: #ffffff;
+  }
+  
+  .back-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}

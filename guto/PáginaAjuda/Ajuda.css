@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #6f4488;
+    height:100px
+}
+
+header {
+    display: flex;
+    width: 95%;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    padding: 1rem;
+}
+
+header a {
+    color: white;
+    background-color: #00000092;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    margin: 50px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 3px solid rgb(78, 30, 190);
+}
+
+header a:hover {
+    background-color: #000000cc;
+    transform: scale(1.05);
+}
+
+.texto {
+    background-color: #8217c0;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    text-shadow: 3px 3px 3px #a725ce;
+    margin: 1rem;
+    text-align: center;
+}
+
+#image-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 2rem;
+    margin-left: 30px;
+    padding: 4rem 2rem;
+    flex: 1;
+    place-content: center;
+    margin-top: 2rem;
+}
+
+.site-card {
+    position: relative;
+    height: 250px;
+    cursor: pointer;
+    perspective: 1000px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.circle-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.site-card:hover .circle-container {
+    transform: rotateY(180deg);
+}
+
+.circle-image, .site-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-image {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    background-image: url('img/circulo branco.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: floatingCircle 4s ease-in-out infinite;
+    animation-play-state: running;
+}
+
+.site-info {
+    transform: rotateY(180deg);
+}
+
+.site-info img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    background-image: url('img/circulo branco.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
+}
+
+@keyframes floatingCircle {
+    0% {
+        transform: translateY(0) rotateY(0);
+    }
+    50% {
+        transform: translateY(-50px) rotateY(0);
+    }
+    100% {
+        transform: translateY(0) rotateY(0);
+    }
+}
+
+.site-card:nth-child(1) .circle-image { animation-delay: 0s; }
+.site-card:nth-child(2) .circle-image { animation-delay: 0.5s; }
+.site-card:nth-child(3) .circle-image { animation-delay: 1s; }
+.site-card:nth-child(4) .circle-image { animation-delay: 1.5s; }
+.site-card:nth-child(5) .circle-image { animation-delay: 2s; }
+.site-card:nth-child(6) .circle-image { animation-delay: 2.5s; }
+.site-card:nth-child(7) .circle-image { animation-delay: 3s; }
+.site-card:nth-child(8) .circle-image { animation-delay: 3.5s; }
+
+@media (max-width: 1200px) {
+    #image-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    #image-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 1rem;
+        padding: 2rem;
+    }
+
+    .site-card {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    #image-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Desktop menor e tablets grandes (menos de 1200px) */
+@media screen and (max-width: 1200px) {
+    header h1 {
+        font-size: 3.5em;
+    }
+    header a {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+    .help-item h2 {
+        font-size: 1.4em;
+    }
+}
+
+/* Tablets e dispositivos menores (menos de 1024px) */
+@media screen and (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header h1 {
+        font-size: 3em;
+    }
+    header a {
+        margin-top: 10px;
+    }
+    main {
+        padding: 15px;
+    }
+    .help-item {
+        padding: 10px;
+    }
+}
+
+/* Tablets menores e dispositivos móveis grandes (menos de 768px) */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+    header a {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+    .help-item h2 {
+        font-size: 1.2em;
+    }
+    .help-item p {
+        font-size: 0.9em;
+    }
+}
+
+/* Dispositivos móveis (menos de 480px) */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+    header a {
+        padding: 5px;
+        font-size: 0.7em;
+    }
+    main {
+        padding: 10px;
+    }
+    .help-item {
+        padding: 8px;
+    }
+    .help-item h2 {
+        font-size: 1.1em;
+    }
+    .help-item p {
+        font-size: 0.8em;
+    }
+}
+
+/* Ajustes para tela muito pequena (menos de 360px) */
+@media screen and (max-width: 360px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    header a {
+        padding: 3px;
+        font-size: 0.6em;
+    }
+    .help-item {
+        padding: 5px;
+    }
+    .help-item h2 {
+        font-size: 1em;
+    }
+}

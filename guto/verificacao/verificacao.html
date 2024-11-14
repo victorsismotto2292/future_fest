@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Código</title>
+    <link rel="stylesheet" href="/guto/verificacao/verificacao.css">
+</head>
+
+<body>
+    <header>
+        <h1>VERIFICAÇÃO DE CÓDIGO</h1>
+        <nav class="nav-bar">
+            <a href="/guto/PaginaLogin/Login.html" class="back-button">
+                <span class="arrow">&#8592;</span> Voltar
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <form class="auth-form">
+                <p class="form-message">Um código de verificação foi enviado para o seu email. Por favor, insira-o
+                    abaixo.</p>
+
+                <div class="form-group">
+                    <label for="verification-code">Código de Verificação</label>
+                    <input type="text" id="verification-code" name="verification-code" required>
+                </div>
+
+                <button type="button" class="submit-button" onclick="verificarCodigo()">Verificar Código</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Não recebeu o código? <a href="#" onclick="reenviarCodigo()">Reenviar código</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="/guto/verificacao/verificacao.js"></script>
+</body>
+
+</html>

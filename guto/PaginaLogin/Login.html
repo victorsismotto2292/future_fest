@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducTech - Login</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <a href="/guto/Páginahome/index.html" class="back-button">
+                <span class="arrow">←</span> Voltar
+            </a>
+        </nav>
+        <h1>Login</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <form class="auth-form" action="#" method="POST" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Seu email" autocomplete="email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" required placeholder="Sua senha">
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        Lembrar de mim
+                    </label>
+                    <a href="/guto/EsqueciSenha/Senha.html" class="forgot-password">
+                        Esqueci minha senha
+                    </a>
+                </div>
+
+                <button onclick="login(email, password)" type="button" class="submit-button">
+                    Entrar
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Não tem uma conta?</p>
+                <a href="/guto/PaginaCadastro/Cadastro.html" class="register-link">
+                    Cadastre-se
+                </a>
+            </div>
+        </div>
+    </main>
+    <script src="Login.js"></script>
+    <script src="Cadastro.js"></script>
+</body>
+
+</html>

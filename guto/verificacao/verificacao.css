@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-color: #B978D7;
+}
+
+header {
+    background-color: #B978D7;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    color: white;
+    text-shadow: 2px 2px 4px #473154;
+    font-size: 3.5rem;
+    margin: 1rem 0;
+}
+
+.nav-bar {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border: 3px solid rgb(78, 30, 190);
+    border-radius: 2rem;
+    font-weight: 500;
+}
+
+.back-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+}
+
+.arrow {
+    font-size: 1.2rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 200px);
+    padding: 2rem 1rem;
+}
+
+.container {
+    background-color: #473154;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 480px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    padding: 0.75rem 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+.form-group input:focus {
+    border-color: #B978D7;
+}
+
+.submit-button {
+    background-color: #B978D7;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #a246cc;
+    transform: translateY(-2px);
+}
+
+.auth-footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.auth-footer a {
+    color: #B978D7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+.form-message {
+    color: white;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .container {
+        padding: 1.5rem;
+    }
+}
+
+/* Media Queries */
+
+/* Desktop menor e tablets grandes (menos de 1200px) */
+@media screen and (max-width: 1200px) {
+    header h1 {
+        font-size: 3.5em;
+    }
+    header a {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+    .verification-item h2 {
+        font-size: 1.4em;
+    }
+}
+
+/* Tablets e dispositivos menores (menos de 1024px) */
+@media screen and (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header h1 {
+        font-size: 3em;
+    }
+    header a {
+        margin-top: 10px;
+    }
+    main {
+        padding: 15px;
+    }
+    .verification-item {
+        padding: 10px;
+    }
+}
+
+/* Tablets menores e dispositivos móveis grandes (menos de 768px) */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+    header a {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+    .verification-item h2 {
+        font-size: 1.2em;
+    }
+    .verification-item p {
+        font-size: 0.9em;
+    }
+}
+
+/* Dispositivos móveis (menos de 480px) */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+    header a {
+        padding: 5px;
+        font-size: 0.7em;
+    }
+    main {
+        padding: 10px;
+    }
+    .verification-item {
+        padding: 8px;
+    }
+    .verification-item h2 {
+        font-size: 1.1em;
+    }
+    .verification-item p {
+        font-size: 0.8em;
+    }
+}
+
+/* Ajustes para tela muito pequena (menos de 360px) */
+@media screen and (max-width: 360px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    header a {
+        padding: 3px;
+        font-size: 0.6em;
+    }
+    .verification-item {
+        padding: 5px;
+    }
+    .verification-item h2 {
+        font-size: 1em;
+    }
+}

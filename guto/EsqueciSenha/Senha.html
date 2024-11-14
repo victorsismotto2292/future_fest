@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducTech - Recuperar Senha</title>
+    <link rel="stylesheet" href="Senha.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <a href="/guto/PaginaLogin/Login.html" class="back-button">
+                <span class="arrow">←</span> Voltar
+            </a>
+        </nav>
+        <h1>Recuperar Senha</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <form class="auth-form">
+                <div class="form-message">
+                    <p>Digite seu email para receber um link de recuperação de senha</p>
+                </div>
+
+                <div class="form-group" method="POST">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Seu email cadastrado">
+                    <input type="button" type="submit" value="Enviar email de recuperação" class="submit-button"
+                        onclick="Senha()">
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="Senha.js"></script>
+    <script src="Senha.env"></script>
+</body>
+
+</html>
