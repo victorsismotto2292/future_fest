@@ -94,6 +94,8 @@ header a:hover {
     background-image: url('src/img/circulo branco.png');
     background-size: contain;
     background-repeat: no-repeat;
+    background-color: #fff;
+    border-radius: 50%;
     background-position: center;
     animation: floatingCircle 4s ease-in-out infinite;
     animation-play-state: running;
