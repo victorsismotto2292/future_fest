@@ -91,14 +91,14 @@ header a:hover {
     width: 100px;
     height: 100px;
     margin: auto;
-    background-image: url('src/img/circulo branco.png');
+    background-image: url('src/img/CirculoBranco.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-color: #fff;
-    border-radius: 50%;
     background-position: center;
     animation: floatingCircle 4s ease-in-out infinite;
     animation-play-state: running;
+    background-color: #fff;
+    border-radius: 50%;
 }
 
 .site-info {
@@ -114,6 +114,8 @@ header a:hover {
     background-repeat: no-repeat;
     background-position: center;
     padding: 10px;
+    animation: floatingCircle 4s ease-in-out infinite; /* Move a animação aqui */
+    animation-play-state: running;
 }
 
 @keyframes floatingCircle {
