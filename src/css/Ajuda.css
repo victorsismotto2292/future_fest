@@ -107,7 +107,7 @@ header a:hover {
     width: 100px;
     height: 100px;
     object-fit: contain;
-    background-image: url('img/circulo branco.png');
+    background-image: url('src/img/circulo branco.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
