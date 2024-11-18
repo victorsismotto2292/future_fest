@@ -91,7 +91,7 @@ header a:hover {
     width: 100px;
     height: 100px;
     margin: auto;
-    background-image: url('img/circulo branco.png');
+    background-image: url('src/img/circulo branco.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
