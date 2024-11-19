@@ -71,7 +71,6 @@ main {
     max-width: 480px;
 }
 
-/* Formulários - Comum a todas as páginas */
 .auth-form {
     display: flex;
     flex-direction: column;
@@ -104,8 +103,6 @@ main {
     outline: none;
     border-color: #B978D7;
 }
-
-/* Campos de senha */
 .password-input {
     position: relative;
     display: flex;
@@ -121,8 +118,6 @@ main {
     cursor: pointer;
     padding: 0.25rem;
 }
-
-/* Opções do formulário de login */
 .form-options {
     display: flex;
     justify-content: space-between;
@@ -150,8 +145,6 @@ main {
 .forgot-password:hover {
     text-decoration: underline;
 }
-
-/* Botão de submit - Comum a todas as páginas */
 .submit-button {
     background-color: #B978D7;
     color: white;
@@ -169,8 +162,6 @@ main {
     background-color: #a246cc;
     transform: translateY(-2px);
 }
-
-/* Rodapé dos formulários */
 .auth-footer {
     margin-top: 2rem;
     text-align: center;
@@ -186,8 +177,6 @@ main {
 .auth-footer a:hover {
     text-decoration: underline;
 }
-
-/* Mensagem informativa - Usado principalmente na página de recuperação de senha */
 .form-message {
     color: white;
     text-align: center;
@@ -195,8 +184,6 @@ main {
     padding: 0 1rem;
     line-height: 1.4;
 }
-
-/* Estilos específicos para a página de cadastro */
 .register-form .form-group {
     margin-bottom: 0.5rem;
 }
@@ -206,8 +193,6 @@ main {
     font-size: 0.8rem;
     margin-top: 0.5rem;
 }
-
-/* Estilos específicos para a página de recuperação de senha */
 .recovery-form {
     text-align: center;
 }
@@ -218,8 +203,6 @@ main {
     border-radius: 0.5rem;
     margin-bottom: 2rem;
 }
-
-/* Feedbacks visuais */
 .success-message {
     color: #4CAF50;
     background-color: rgba(76, 175, 80, 0.1);
@@ -235,8 +218,6 @@ main {
     border-radius: 0.5rem;
     margin-bottom: 1rem;
 }
-
-/* Cadastro.html Styles */
 :root {
     --primary-color: #007bff;
     --secondary-color: #6c757d;
@@ -395,7 +376,6 @@ main {
     }
   }
   
-  /* Dark Mode */
   @media (prefers-color-scheme: dark) {
     :root {
       --background-color: #1a1a1a;
