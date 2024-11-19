@@ -67,7 +67,7 @@ async function callDeepbrainAPI(inputText) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'https://app.aistudios.com/api/odin/v3/auth/token' // substitua por sua chave de API
+            'Authorization': 'https://app.aistudios.com/api/odin/v3/auth/token'
         },
         body: JSON.stringify({ text: inputText })
     });
@@ -119,7 +119,7 @@ function scrollToTop() {
 }
 
 async function fetchVideoFromPexels(query) {
-    const apiKey = 'YOUR_PEXELS_API_KEY'; // Substitua pela sua chave da API do Pexels
+    const apiKey = 'YOUR_PEXELS_API_KEY';
     const response = await fetch(`https://api.pexels.com/videos/search?query=${encodeURIComponent(query)}`, {
         method: 'GET',
         headers: {
@@ -132,12 +132,12 @@ async function fetchVideoFromPexels(query) {
     }
 
     const data = await response.json();
-    return data.videos; // Retorna a lista de vídeos
+    return data.videos;
 }
 
 async function buscarVideos() {
     const API_KEY = 'SOkxzdalf0Gvlun1uhSe7EAhOUo2oF4tiWmQJcWdrpieXqkfWpDAPtXg';
-    const keyword = document.getElementById('search-input').value.trim();  // Obtém o valor do campo de pesquisa
+    const keyword = document.getElementById('search-input').value.trim();
 
     if (keyword === "") {
         alert("Por favor, digite um termo para pesquisa.");
@@ -152,9 +152,8 @@ async function buscarVideos() {
     });
 
     const data = await response.json();
-    console.log(data); // Para verificar a resposta da API
+    console.log(data);
 
-    // Verifica se a resposta contém vídeos
     if (data.videos && data.videos.length > 0) {
         const videoUrl = data.videos[0].video_files[0].link;
         const videoContainer = document.getElementById("video-container");
