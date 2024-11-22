@@ -31,7 +31,7 @@ function verificarCodigo() {
 
     if (codigoInserido === codigoVerificacao.toString()) {
         alert("Código registrado! Cadastre sua nova senha...");
-        window.location.href = '/guto/NovaSenha/novaSenha.html';
+        window.location.href = 'novaSenha.html';
     } else {
         alert("Código enviado incorreto! Insira o código enviado corretamente ou peça para enviar um novo código");
     }
