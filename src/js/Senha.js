@@ -6,7 +6,7 @@ function Senha() {
     } else {
         setTimeout(() => {
             alert("Email enviado com sucesso! Redirecionando...");
-            window.location.href = "/verificacao/verificacao.html";
+            window.location.href = "verificacao.html";
         }, 2000);
     }
 }
