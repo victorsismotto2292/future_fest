@@ -63,12 +63,12 @@ function showLoadingAndRedirect(type) {
     if (type === 'login') {
         alert("Login sucessido, redirecionado para a página inicial...");
         setTimeout(() => {
-            window.location.href = "/guto/Páginahome/index.html";
+            window.location.href = "index.html";
         }, 2000);
     } else {
         alert("Redirecionando para a página de login...");
         setTimeout(() => {
-            window.location.href = "/guto/PaginaLogin/Login.html";
+            window.location.href = "Login.html";
         }, 2000);
     }
 }
