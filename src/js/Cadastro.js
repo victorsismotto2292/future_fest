@@ -38,11 +38,6 @@ function registerUser(fullName, email, password, confirmPassword) {
 }
 
 function login(email, password) {
-    if (!email || !password) {
-        alert("Dados incorretos, por favor, insira valores válidos para continuar");
-        return false;
-    }
-
     if (email === "usuario.exemplo@gmail.com" && password === "123456") {
         showLoadingAndRedirect('login');
         return true;
@@ -53,9 +48,6 @@ function login(email, password) {
     if (user) {
         showLoadingAndRedirect('login');
         return true;
-    } else {
-        alert("Dados incorretos, por favor, insira valores válidos para continuar");
-        return false;
     }
 }
 
