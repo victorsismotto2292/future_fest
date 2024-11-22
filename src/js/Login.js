@@ -11,7 +11,7 @@ function isUserRegistered(email) {
 
 function registerUser(fullName, email, password, confirmPassword) {
     if (!fullName || !email || !password || !confirmPassword) {
-        alert("Dados incorretos, por favor, insira valores válidos para continuar");
+        alert("Dados incorretos, por favor, insira valores válidos para continuar.");
         return false;
     }
     if (!validateEmail(email)) {
