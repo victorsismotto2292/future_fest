@@ -49,7 +49,7 @@ function login(email, password) {
     if (!isUserRegistered(email)) {
         alert("Este usuário não está cadastrado, por favor, cadastre seus dados na página de cadastro para continuar");
         setTimeout(() => {
-            window.location.href = "/guto/PaginaCadastro/Cadastro.html";
+            window.location.href = "Cadastro.html";
         }, 3000);
         return false;
     }
